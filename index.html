@@ -3,22 +3,81 @@
 <head>
     <title>Word Guess Game</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-<script src="assets/Javascript/game.js">
-
-
 
 <div class="container">
     <h1>Word Guess Game</h1>
     <h2>Press any key to get started</h2>
-
-
-    
-
 </div>
+
+<p>Wins: <span id="wins">0</span></p>
+
+<p>Letters you've guessed so far: <span id="guesses-so-far"></span></p>
+
+<script type="text/javascript" src="assets/Javascript/game.js">
+
+// Array of Words to guess 
+var words = [
+    "skywalker", 
+    "stormtrooper",
+    "jedi",
+    "palpatine",
+    "chewbacca",
+];
+
+// Array of letters to guess
+var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
+'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+'t', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+
+// Start the game with 0
+var wins = 0; // start the game with 0 wins
+var wordIndex = 0; // index to hold words
+var guessesLeft = 10; // start game with 10 guess remaining
+
+
+ // when user presses key to start game
+document.onkeyup = function(event) {
+    
+    // Which letter was pressed
+    var userGuess =event.key; 
+
+    // if no more guesses, stop the function.
+    if (guessesLeft === 0) {
+        return;
+    }
+}
+
+// function to update score 
+ function updateScore() {
+     document.querySelector("#wins").innerHTML = "Wins: " + wins;
+ }
+// Array of letters we've guessed
+var guessedLetters = [];
+
+
+
+
+
+
+// Choosing Random Word from array
+var word = words[Math.floor(Math.random() * words.length)];
+
+// setting up letters in word
+var lettersArray = [];
+    for (var i = 0; i < word.length; i++) {
+        lettersArray[i] = "_";
+    }
+var remainingLetters = word.length;
+
+// Remaining letters code
+
+
+
 
 </script>
 </body>
