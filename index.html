@@ -13,14 +13,14 @@
 </head>
 <body>
 
-<header>
+<div class="header">
     <h1>Word Guess Game</h1>
     <p>Star Wars!</p>
-</header>
+</div>
 
 
 <div class="container">
-    <h2>Press any key to get started</h2>
+    <p>Press any key to get started</p>
     <p>Wins: <span id="wins">0</span></p>
     <p>Letters you've guessed so far: <span id="guesses-so-far"></span></p>
     <button id="reset">Play Again?</button>
@@ -33,11 +33,11 @@
 
 // Array of Words to guess 
 var words = [
-    "skywalker", 
-    "stormtrooper",
-    "jedi",
-    "palpatine",
-    "chewbacca",
+    { w: "skywalker", a: "s", "k", "y", "w", "a", "l", "k", "e", "r"},
+    { w: "stormtrooper", a: "s", "t", "o","r", "m", "t", "r", "o", "o", "p", "e", "r"},
+    { w: "jedi", a: "j", "e", "d", "i"},
+    { w: "palpatine", a: "p", "a", "l", "p", "a", "t", "i", "n", "e"},
+    { w: "vader", a: "v", "a", "d", "e", "r"},
 ];
 
 // Array of letters to guess
