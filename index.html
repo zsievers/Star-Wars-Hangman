@@ -22,23 +22,40 @@
 <div class="container">
     <p>Press any key to get started</p>
     <p>Wins: <span id="wins">0</span></p>
-    <p>Letters you've guessed so far: <span id="guesses-so-far"></span></p>
+    <p>Current Word</p>
+    <div class="underscore"> _ _ _ _</div>
+    <p id="Guesses-Remaining">Number of Guesses Remaining: </p>
+    <p>Letters you've guessed so far: <span id="Letters-Guessed"></span></p>
     <button id="reset">Play Again?</button>
 </div>
 
 
-<script type="text/javascript" src="/assets/Javascript/game.js">
+<script type="text/javascript">
 
 
+// get users guess
+// check if guess is right
+// if right pus to right array
+// if wrong push to wrong array
 
 // Array of Words to guess 
-var words = [
-    { w: "skywalker", a: "s", "k", "y", "w", "a", "l", "k", "e", "r"},
-    { w: "stormtrooper", a: "s", "t", "o","r", "m", "t", "r", "o", "o", "p", "e", "r"},
-    { w: "jedi", a: "j", "e", "d", "i"},
-    { w: "palpatine", a: "p", "a", "l", "p", "a", "t", "i", "n", "e"},
-    { w: "vader", a: "v", "a", "d", "e", "r"},
+var word = ["skywalker", "stormtrooper", "jedi", "palpatine", "vader",
 ];
+
+// Choosing Random Word from array
+var chosenWord = Math.floor(Math.random() * word.length); 
+var chosenWord = word[chosenWord]
+ 
+// creating underscore based on random wrod
+var generateUnderscore = () => {
+    for (var i = 0; i < chosenWord.length; i++) {
+        generateUnderscore[i] = "_";
+    }
+}
+console.log(generateUnderscore)
+
+
+
 
 // Array of letters to guess
 var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
@@ -52,37 +69,31 @@ var guess; //user guesses letter
 var lettersGuessed; // letters guessed by user
 
 
-// Choosing Random Word from array
-var word = words[Math.floor(Math.random() * words.length)];
-
-// setting up letters in word
-var answerArray = [];
-    for (var i = 0; i < word.length; i++) {
-        answerArray[i] = "_";
-    }
-
-var remainingLetters = word.length;
 
 
-while (remainingLetters > 0) {
-    // User Guesses
+
+// var remainingLetters = word.length;
+
+
+// while (remainingLetters > 0) {
+
     
-}
+// }
 
 
- // when user presses key to start game
-document.onkeyup = function(event) {
+//  // when user presses key to start game
+// document.onkeyup = function(event) {
     
-    // Which letter was pressed
-    var guess =event.key; 
+// // Which letter was pressed
+//     var guess =event.key; 
 
-    // if no more guesses, stop the function.
+// // if no more guesses, stop the function.
     
 
-// function to update score 
- function updateScore() {
-     document.querySelector("#wins").innerHTML = "Wins: " + wins;
- }
+// // function to update score 
+//  function updateScore() {
+//      document.querySelector("#wins").innerHTML = "Wins: " + wins;
+//  }
 
 
 
