@@ -17,8 +17,7 @@
     <h1>Word Guess Game</h1>
     <p>Star Wars!</p>
 </div>
-
-
+<br>
 <div class="container">
     <p>Press any key to get started</p>
     <p>Wins: <span id="wins">0</span></p>
@@ -44,15 +43,17 @@ var word = ["skywalker", "stormtrooper", "jedi", "palpatine", "vader",
 
 // Choosing Random Word from array
 var chosenWord = Math.floor(Math.random() * word.length); 
-var chosenWord = word[chosenWord]
+var chosenWord = word[chosenWord];
+var underScore = [];
  
 // creating underscore based on random wrod
 var generateUnderscore = () => {
     for (var i = 0; i < chosenWord.length; i++) {
-        generateUnderscore[i] = "_";
+        underScore.push("_");
     }
+    return underScore;
 }
-console.log(generateUnderscore)
+console.log(generateUnderscore ());
 
 
 
