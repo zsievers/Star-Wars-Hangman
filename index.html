@@ -31,43 +31,81 @@
 
 <script type="text/javascript">
 
-
-// get users guess
-// check if guess is right
-// if right pus to right array
-// if wrong push to wrong array
-
 // Array of Words to guess 
 var word = ["skywalker", "stormtrooper", "jedi", "palpatine", "vader",
 ];
 
-// Choosing Random Word from array
-var chosenWord = Math.floor(Math.random() * word.length); 
-var chosenWord = word[chosenWord];
-var underScore = [];
- 
-// creating underscore based on random wrod
-var generateUnderscore = () => {
-    for (var i = 0; i < chosenWord.length; i++) {
-        underScore.push("_");
-    }
-    return underScore;
-}
-console.log(generateUnderscore ());
-
-
-
+var wins = 0; // start the game with 0 wins
+var wordIndex = 0; // index to hold hangman words
+var guessesLeft = 10; // start game with 10 guess remaining
+var lettersGuessed; // letters guessed by user
 
 // Array of letters to guess
 var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
-var wins = 0; // start the game with 0 wins
-var wordIndex = 0; // index to hold hangman words
-var guessesLeft = 10; // start game with 10 guess remaining
-var guess; //user guesses letter
-var lettersGuessed; // letters guessed by user
+
+
+
+
+// Choosing Random Word from array
+var chosenWord = Math.floor(Math.random() * word.length); 
+var newWord = word[chosenWord];
+var underScore = [];
+console.log(newWord);
+// creating underscore based on random wrod
+var generateUnderscore = () => {
+    for (var i = 0; i < newWord.length; i++) {
+        underScore.push("_"); // for loop ; chooses random word in word array; so that index numbers and "_" match
+    }
+    console.log(underScore);
+    return underScore; // brings number of underscores associated with word to life
+}
+generateUnderscore (); // loop now = generateUnderscore
+
+// get users guess
+    document.onkeyup = function (event) { // capturing data from the keyboard
+        var guess = event.key; // creating guess from outside and re-defining inside
+        var lettersGuessed =[];
+        console.log(guess);
+
+// next step: add all user guesses into an array ; create a check loop
+        for (var i = 0; i < lettersGuessed.length; i++) {
+           console.log(underScore[lettersGuessed[i]]) 
+        }
+
+
+        // check if guess is right
+        if (lettersGuessed <= 0) {
+            guessesLeft--;
+            console.log(guessesLeft)
+        }
+        else {
+            // letters replace the "_"
+        
+        }
+
+        for (i = 0; i < newWord.length; i++) { 
+
+            if (guess === newWord[i]) {
+                console.log("letterExists");
+                lettersGuessed.push(guess);
+            }  
+            }
+
+        
+    } 
+
+
+// after every incorrect guess lose a point
+// what happens if it is wrong
+
+
+
+
+
+
 
 
 

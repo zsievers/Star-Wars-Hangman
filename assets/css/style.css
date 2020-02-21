@@ -1,5 +1,5 @@
 body {
-    background-image: url("../images/stars.jpg");
+    /* background-image: url("../images/stars.jpg"); */
     background-size: cover;
 }
 
@@ -7,7 +7,7 @@ body {
     font-family: 'Press Start 2P', cursive;
     text-align: center;
     font-size: 30px;
-    color: white;
+    color: black;
     margin: 0 auto;
     width: 80%;
     padding-top: 20px;
@@ -19,6 +19,6 @@ body {
     font-size: 20px;
     margin: 0 auto;
     width: 50%;
-    color: white;
+    color: black;
     border: 2px solid goldenrod;
 }
