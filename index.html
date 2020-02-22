@@ -19,94 +19,19 @@
 </div>
 <br>
 <div class="container">
-    <p>Press any key to get started</p>
-    <p>Wins: <span id="wins">0</span></p>
-    <p>Current Word</p>
-    <div class="underscore"></div>
+    <p id="start">Press any key to get started</p>
+        <p>Current Word</p>
+    <div class="underscore"> </div>
     <p id="Guesses-Remaining">Number of Guesses Remaining: </p>
     <p>Letters you've guessed so far: <span id="Letters-Guessed"></span></p>
+    <p>Wins: <span id="wins">0</span></p>
     <button id="reset">Play Again?</button>
 </div>
 
 
-<script type="text/javascript">
+<script src="assets/Javascript/game.js" type="text/javascript"></script>
 
-// Global Variables
-    var word = ["skywalker", "stormtrooper", "jedi", "palpatine", "vader",
-    ];
-    var wins = 0; // start the game with 0 wins
-    var wordIndex = 0; // index to hold hangman words
-    var guessesLeft = 10; // start game with 10 guess remaining
-    var lettersGuessed; // letters guessed by user
-    var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
-    'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
-    't', 'u', 'v', 'w', 'x', 'y', 'z'];
-    var randWord = Math.floor(Math.random() * word.length); 
-    var chosenWord = word[randWord];
-    var underScore = [];
-    var rightWord = [];
-    var wrongWord = [];
-    var docUnderScore = document.getElementsByClassName("underscore");
-
-// Starts game
-
-
-
-console.log(chosenWord); 
-
-// creating underscore based on random wrod
-var generateUnderscore = () => {
-    for (var i = 0; i < chosenWord.length; i++) {
-        underScore.push("_"); // for loop ; chooses random word in word array; so that index numbers and "_" match
-        docUnderScore[0].innerHTML = underScore.join('');
-    }
-    console.log(underScore); // shows number of underscores on console
-    return underScore; // brings number of underscores associated with word to life
-}
-generateUnderscore (); // loop now = generateUnderscore
-
-
-
-
-// get users guess
-    document.onkeyup = function (event) { // capturing data from the keyboard
-        var guess = event.key; // creating guess from outside and re-defining inside
-        var lettersGuessed =[];
-        console.log(guess);
-
-// next step: add all user guesses into an array ; create a check loop
-        for (var i = 0; i < lettersGuessed.length; i++) {
-           console.log(underScore[lettersGuessed[i]]) 
-            
-        
-        }
-
-
-        for (i = 0; i < chosenWord.length; i++) { 
-
-            if (guess === chosenWord[i]) {
-                console.log("letterExists");
-                lettersGuessed.push(guess);
-            }
-            else  {
-                
-                
-
-            }
-        }
-
-    
-        // check if guess is right -- remaining guesses
-        // if (lettersGuessed <= 0) {
-        //     guessesLeft--;
-        //     console.log(guessesLeft)
-        // }
-        // else {
-        //     // letters replace the "_" if letter is correct
-        
-        // }
-    }; 
-
+<script>
 
 </script>
 </body>
