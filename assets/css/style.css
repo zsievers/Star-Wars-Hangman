@@ -1,24 +1,42 @@
 body {
-    /* background-image: url("../images/stars.jpg"); */
+    background-image: url("../images/stars.jpg");
     background-size: cover;
 }
 
-.header {
-    font-family: 'Press Start 2P', cursive;
-    text-align: center;
-    font-size: 30px;
-    color: black;
-    margin: 0 auto;
-    width: 80%;
-    padding-top: 20px;
+.jumbotron {
+    background-color: none;
+    background-image: url("../images/stars.jpg");
+    background-size: cover;
 }
 
 .container {
+
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.container2 {
     font-family: 'Press Start 2P', cursive;
     text-align: center;
     font-size: 20px;
     margin: 0 auto;
-    width: 50%;
-    color: black;
-    border: 2px solid goldenrod;
+    width: 70%;
+    color: white;
+}
+
+.Guesses-Remaining {
+    padding: 20px;
+}
+
+.Letters-Guessed {
+    border: 2px dotted goldenrod;
+    padding: 20px;
+}
+
+.Wins {
+    padding: 20px;
 }
