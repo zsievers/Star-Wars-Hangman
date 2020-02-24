@@ -28,7 +28,7 @@ body {
     color: white;
 }
 
-.Guesses-Remaining {
+.guessesLeft {
     padding: 20px;
 }
 
@@ -39,4 +39,9 @@ body {
 
 .Wins {
     padding: 20px;
+}
+
+.underscore {
+    font-size: 30px;
+    color: goldenrod;
 }

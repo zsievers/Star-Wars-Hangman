@@ -22,14 +22,19 @@
 
 <div class="container2">
     <p id="start">Press any key to get started</p>
-        <p>Current Word</p>
+    <br>
+        <p><u>Current Word:</u></p>
     <div class="underscore"> </div>
     <br>
-    <p class="Guesses-Remaining">Number of Guesses Remaining: </p>
+    <!-- Where number of remaining guesses will go -->
+    <p class="guessesLeft">Number of Guesses Remaining: </p>
+    <!-- Where guessed letters will go -->
     <p class="Letters-Guessed">Letters you've guessed so far:</p>
+    <!-- Where your wins will be shown -->
     <p class="Wins">Wins: 0 </p>
     <div>
-        <button type="button" class="btn btn-warning">Play Again</button>
+        <!-- button if you want to play again -->
+        <button onclick = "location.reload();" class="btn btn-warning" id="button" >Click To Play Again</button>
     </div>
 </div>
 

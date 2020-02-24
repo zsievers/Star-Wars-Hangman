@@ -1,27 +1,33 @@
 // Global Variables
+
+// ==================================================================================
+
 var word = ["skywalker", "stormtrooper", "jedi", "palpatine", "vader",
 ];
-var wins = 0; // start the game with 0 wins
-// var letterIndex = 0; // index to hold hangman words
-var guessesLeft = 10; // start game with 10 guess remaining
-var lettersGuessed; // letters guessed by user
-// var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
-// 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
-// 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-// var randWord = Math.floor(Math.random() * word.length); 
-// var chosenWord = word[randWord];
+
+var randWord = Math.floor(Math.random() * word.length); 
+
+var chosenWord = word[randWord];
+
+// counters
+var wins = 0;
+var loss = 0;
+var guessesLeft = 10;
+
+
 var underScore = [];
 var win = document.getElementsByClassName("Wins");
 var docUnderScore = document.getElementsByClassName("underscore");
-var gameFinished = false;
-// Starts game
 
+
+// Starts game
 
 onload= function() { // allows page to load before running script
 
     var randWord = Math.floor(Math.random() * word.length); 
     var chosenWord = word[randWord];
     var userGuess = event.key;
+
 console.log(chosenWord); // allows you to see the word in console
 
 // Press any letter to start the game
@@ -38,6 +44,7 @@ var generateUnderscore = () => {
     console.log(underScore); // shows number of underscores on console
     return underScore; // brings number of underscores associated with word to life
 }
+
 generateUnderscore (); // loop now = generateUnderscore
 
 // ----------------------------------------------------------------------------
@@ -56,12 +63,16 @@ generateUnderscore (); // loop now = generateUnderscore
                 lettersGuessed.push(i);
                 // console.log("LetterExits");
                 // console.log(lettersGuessed)
+
+            if (guessesLeft === 0 ) {
+                alert("You Lose!");
+                }
             }
 
         } 
         
-        for (var i = 0; i < lettersGuessed.length; i++) {
-            underScore[lettersGuessed[i]] = userGuess;
+        for (var j = 0; j < lettersGuessed.length; j++) {
+            underScore[lettersGuessed[j]] = userGuess;
           //   console.log(underScore[lettersGuessed[i]]);
           //   console.log([lettersGuessed[i]]);           
       };    
@@ -73,16 +84,16 @@ generateUnderscore (); // loop now = generateUnderscore
 
 
                 
-                updateDisplay() 
+    updateDisplay() 
 };   
 
 
 // update display during the game ; brings letters to page
     function updateDisplay() {
         document.querySelector(".underscore").textContent = "";
-        for (i = 0; i < underScore.length; i++) {
+        for (z = 0; z < underScore.length; z++) {
             document.querySelector(".underscore").textContent += 
-            underScore[i];
+            underScore[z];
         }
 
     }
@@ -91,6 +102,14 @@ generateUnderscore (); // loop now = generateUnderscore
         winText.textContent = "Wins: " + winText;
     }
      
+// button play again
+
+// document.getElementById("button").onclick = function () {myFunction()};
+
+// function () {
+//     reset ()
+// }
+// }
 
 
 };
