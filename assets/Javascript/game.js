@@ -63,13 +63,14 @@ generateUnderscore (); // loop now = generateUnderscore
                 lettersGuessed.push(i);
                 // console.log("LetterExits");
                 // console.log(lettersGuessed)
-
-            if (guessesLeft === 0 ) {
-                alert("You Lose!");
-                }
             }
+            else if (guessesLeft === 0 ) {
+                alert ("You Lose. Refresh if you want to play again!")
+                };
+            
 
         } 
+    
         
         for (var j = 0; j < lettersGuessed.length; j++) {
             underScore[lettersGuessed[j]] = userGuess;
@@ -79,11 +80,10 @@ generateUnderscore (); // loop now = generateUnderscore
     
       if (lettersGuessed.length <= 0) {
         guessesLeft--;
-        console.log(guessesLeft)
-    }
+        console.log(guessesLeft) 
+        document.querySelector(".guessesLeft").textContent = "Remaining guesses left: " + guessesLeft;
 
-
-                
+    }    
     updateDisplay() 
 };   
 
@@ -98,20 +98,6 @@ generateUnderscore (); // loop now = generateUnderscore
 
     }
     
-    if ((userGuess === "chosenWord.length")) {
-        winText.textContent = "Wins: " + winText;
-    }
-     
-// button play again
-
-// document.getElementById("button").onclick = function () {myFunction()};
-
-// function () {
-//     reset ()
-// }
-// }
-
-
 };
-// calling the 2 functions at the beginning of the game
+
 
