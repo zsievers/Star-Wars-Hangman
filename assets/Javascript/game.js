@@ -1,8 +1,4 @@
-// Global Variables
-
-// ==================================================================================
-
-var word = ["skywalker", "stormtrooper", "jedi", "palpatine", "vader",
+var word = ["skywalker", "yoda", "solo", "palpatine", "vader", "chewbakka"
 ];
 
 var randWord = Math.floor(Math.random() * word.length); 
@@ -99,5 +95,6 @@ generateUnderscore (); // loop now = generateUnderscore
     }
     
 };
+
 
 

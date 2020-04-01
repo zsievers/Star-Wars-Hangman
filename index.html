@@ -1,41 +1,34 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <title>Word Guess Game</title>
     <meta charset="utf-8">
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- Font -->
+    <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
-
+    <title>Word Guess Game</title>
 </head>
 <body>
-
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
           <h1 class="display-4">Word Guess Game</h1>
           <p class="lead">Star Wars!</p>
         </div>
-      </div>
+    </div>
 
 <div class="container2">
-    <p id="start">Press any key to get started</p>
+    <div id="start">Press any key to play</div>
     <br>
-        <p><u>Current Word:</u></p>
+    <div id="currentWord"><u>Current Word:</u></div>
     <div class="underscore"> </div>
     <br>
     <!-- Where number of remaining guesses will go -->
-    <p class="guessesLeft">Number of Guesses Remaining: </p>
+    <div class="guessesLeft">Number of Guesses Remaining: </div>
     <!-- Where guessed letters will go -->
-    <p class="Letters-Guessed">Letters you've guessed so far:</p>
+    <div class="Letters-Guessed">Letters Guessed: </div> 
     <!-- Where your wins will be shown -->
-    <p class="Wins">Wins: 0 </p>
-    <div>
-        <!-- button if you want to play again -->
-        <button onclick = "location.reload();" class="btn btn-warning" id="button" >Click To Play Again</button>
-    </div>
+    <div class="Wins">Wins: 0 </div>
+    <div button onclick = "location.reload();" class="btn btn-warning" id="button" >Click To Play Again</button></div>
 </div>
 
 
