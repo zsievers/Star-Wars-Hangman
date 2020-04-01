@@ -10,26 +10,50 @@
 </head>
 <body>
     <div class="jumbotron jumbotron-fluid">
-        <div class="container">
+        <div class="header">
           <h1 class="display-4">Word Guess Game</h1>
           <p class="lead">Star Wars!</p>
         </div>
     </div>
 
-<div class="container2">
-    <div id="start">Press any key to play</div>
-    <br>
-    <div id="currentWord"><u>Current Word:</u></div>
-    <div class="underscore"> </div>
-    <br>
-    <!-- Where number of remaining guesses will go -->
-    <div class="guessesLeft">Number of Guesses Remaining: </div>
-    <!-- Where guessed letters will go -->
-    <div class="Letters-Guessed">Letters Guessed: </div> 
-    <!-- Where your wins will be shown -->
-    <div class="Wins">Wins: 0 </div>
-    <div button onclick = "location.reload();" class="btn btn-warning" id="button" >Click To Play Again</button></div>
-</div>
+    <div class="container">
+        <div class="row">
+            <!-- Left col-->
+          <div class="col">
+              <!-- div for character -->
+          </div>
+          <!-- Game in center col -->
+          <div class="col-8">
+            <div id="start">Press any key to play</div>
+                <br>
+            <div id="currentWord"><u>Current Word:</u></div>
+            <div class="underscore"> </div>
+                <br>
+            <!-- Where number of remaining guesses will go -->
+            <div class="guessesLeft">Number of Guesses Remaining: </div>
+            <!-- Where guessed letters will go -->
+            <div class="Letters-Guessed">Letters Guessed: </div> 
+            <!-- Where your wins will be shown -->
+            <div class="Wins">Wins: </div>
+            <!-- Where losses will be shown -->
+            <div class="Loss">Losses: </div>
+            <div button onclick = "location.reload();" class="btn btn-warning" id="button" >Click To Play Again</button></div>
+
+          </div>
+          <!-- right col -->
+          <div class="col">
+              <!-- div for character -->
+          </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    
+  
 
 
 <script src="assets/Javascript/game.js" type="text/javascript"></script>

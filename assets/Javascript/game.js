@@ -1,5 +1,6 @@
-var word = ["skywalker", "yoda", "solo", "palpatine", "vader", "chewbakka"
-];
+// Global Variables
+// =========================================================================
+var word = ["skywalker", "yoda", "solo", "palpatine", "vader", "chewbacca"];
 
 var randWord = Math.floor(Math.random() * word.length); 
 
