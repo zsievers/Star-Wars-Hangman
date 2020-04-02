@@ -24,7 +24,7 @@
           </div>
           <!-- Game in center col -->
           <div class="col-8">
-            <div id="start">Click to Start!</div>
+            <div button onclick = "location.reload();" class="btn btn-warning" id="button" >Click To Play</button></div>
                 <br>
             <div id="currentWord"></div>
                 <br>
@@ -32,9 +32,10 @@
             <div>Number of Guesses Remaining: <span id="guessesLeft"></span>
             </div>
                 <br>
+            <p>Letters Guessed:</p> 
             <!-- Where guessed letters will go -->
-            <div>Letters Guessed: <span id="lettersGuessed"></span>
-            </div> 
+            <div id="lettersGuessed"></div>
+                
                 <br>
 
             <div class="score">
@@ -46,7 +47,7 @@
                 </div>
             </div>
                 <br>
-            <div button onclick = "location.reload();" class="btn btn-warning" id="button" >Click To Play Again</button></div>
+            
 
           </div>
           <!-- right col -->

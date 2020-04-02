@@ -12,6 +12,7 @@ var loss = 0;
 var guessesRemaining = 10;
 // functions (reusable blocks of code that i will call upon )
 // =========================================================================
+
 function startGame() {
     chosenWord = words[Math.floor(Math.random() * words.length)]; // randomizes words array
     lettersInWord = chosenWord.split("");// break word apart in indiv letters
@@ -68,33 +69,27 @@ function checkLetters(letter){
 
 
 function gameEnd() {
-    console.log("Wins: " + wins + " | Losses: " + loss + " | Guesses Remaining: " + guessesRemaining);
-
     // update html 
     document.getElementById("guessesLeft").innerHTML = guessesRemaining;
     document.getElementById("currentWord").innerHTML = scoresAndLetters.join(" ");
     document.getElementById("lettersGuessed").innerHTML = lettersGuessed.join(" ");
 
-
-
     // user won
-    if (lettersInWord.toString() == scoresAndLetters.toString()) {
+    if (lettersInWord.toString() === scoresAndLetters.toString()) {
         wins++;
         alert("You won"); // change this
 
         // display win
         document.getElementById("wins").innerHTML = wins;
-
         startGame();
     }
     // user lost
-    else if (guessesRemaining == 0){
+    else if (guessesRemaining === 0){
         loss++;
         alert("you lost"); // change this
 
         //display loss
         document.getElementById("loss").innerHTML = loss;
-
         startGame();
     }
       
@@ -105,10 +100,10 @@ function gameEnd() {
 startGame();
 
 // keyclicks
-document.onkeyup = function(event) {
-    var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-
-    checkLetters(userGuess);
-    gameEnd();
-    console.log(userGuess)
-}
+document.onkeyup = function (event) {
+    if (event.keyCode >= 65 && event.keyCode <= 90) {
+        var userGuess = event.key.toLowerCase();
+        checkLetters(userGuess);
+        gameEnd();
+    }
+};
