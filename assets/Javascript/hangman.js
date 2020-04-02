@@ -31,6 +31,7 @@ function startGame() {
     // display to html
     document.getElementById("currentWord").innerHTML = scoresAndLetters.join(" ");
     document.getElementById("guessesLeft").innerHTML = guessesRemaining;
+    document.getElementById("lettersGuessed").innerHTML = lettersGuessed;
     document.getElementById("wins").innerHTML = wins;
     document.getElementById("loss").innerHTML = loss;
 
