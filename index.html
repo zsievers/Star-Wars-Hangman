@@ -29,13 +29,23 @@
             <div id="currentWord"></div>
                 <br>
             <!-- Where number of remaining guesses will go -->
-            <div class="guessesLeft">Number of Guesses Remaining: </div>
+            <div>Number of Guesses Remaining: <span id="guessesLeft"></span>
+            </div>
+                <br>
             <!-- Where guessed letters will go -->
-            <div class="Letters-Guessed">Letters Guessed: </div> 
-            <!-- Where your wins will be shown -->
-            <div class="Wins">Wins: </div>
-            <!-- Where losses will be shown -->
-            <div class="Loss">Losses: </div>
+            <div>Letters Guessed: <span id="lettersGuessed"></span>
+            </div> 
+                <br>
+
+            <div class="score">
+                <!-- Where your wins will be shown -->
+                <div>Wins: <span id="wins"></span>
+                </div>
+                <!-- Where losses will be shown -->
+                <div>Losses: <span id="loss"></span>
+                </div>
+            </div>
+                <br>
             <div button onclick = "location.reload();" class="btn btn-warning" id="button" >Click To Play Again</button></div>
 
           </div>
@@ -56,9 +66,5 @@
 
 
 <script src="assets/Javascript/hangman.js" type="text/javascript"></script>
-
-<script>
-
-</script>
 </body>
 </html>
