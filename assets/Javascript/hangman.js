@@ -3,7 +3,7 @@
 var words = ["skywalker", "yoda", "solo", "palpatine", "vader", "chewbacca"];
 var chosenWord = ""; // word chosen
 var lettersInWord = []; // whatletters are in the word
-var wrongLetters = []; // 
+var lettersGuessed = []; // 
 var underscores = 0; //  number of underscores in the word
 var scoresAndLetters = []; // v _ _ _ r 
 
@@ -19,7 +19,7 @@ function startGame() {
 
     // reset each round
     guessesRemaining = 10;
-    wrongLetters = [];
+    lettersGuessed = [];
     scoresAndLetters = [];
 
     // generates underscores and letters in word
@@ -35,8 +35,8 @@ function startGame() {
 
     //testing
     console.log(chosenWord);
-    console.log(lettersInWord);
-    console.log(underscores);
+    // console.log(lettersInWord);
+    // console.log(underscores);
     console.log(scoresAndLetters);
 } 
 
@@ -58,7 +58,7 @@ function checkLetters(letter){
         }
     }    
     else {
-        wrongLetters.push(letter);
+        lettersGuessed.push(letter);
         guessesRemaining --;
     }
 
@@ -69,10 +69,18 @@ function checkLetters(letter){
 
 function gameEnd() {
     console.log("Wins: " + wins + " | Losses: " + loss + " | Guesses Remaining: " + guessesRemaining);
+
+    // update html 
+    document.getElementById("guessesLeft").innerHTML = guessesRemaining;
+    document.getElementById("currentWord").innerHTML = scoresAndLetters.join(" ");
+    document.getElementById("lettersGuessed").innerHTML = lettersGuessed.join(" ");
+
+
+
     // user won
     if (lettersInWord.toString() == scoresAndLetters.toString()) {
         wins++;
-        alert("You won");
+        alert("You won"); // change this
 
         // display win
         document.getElementById("wins").innerHTML = wins;
@@ -80,6 +88,16 @@ function gameEnd() {
         startGame();
     }
     // user lost
+    else if (guessesRemaining == 0){
+        loss++;
+        alert("you lost"); // change this
+
+        //display loss
+        document.getElementById("loss").innerHTML = loss;
+
+        startGame();
+    }
+      
 }
 // main process
 // =========================================================================
