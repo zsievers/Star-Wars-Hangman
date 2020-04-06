@@ -80,6 +80,13 @@ function gameEnd() {
     if (scoresAndLetters.indexOf("_") === -1){
         // console.log(scoresAndLetters.indexOf("_"));
         wins++;
+        
+        if (chosenWord === "skywalker"){
+            document.querySelector(".winningImg").setAttribute("src", "#"); // correct image with correct path
+        }
+        else if (chosenWord === "yoda") {
+            
+        }
         // console.log(lettersInWord.toString());
         // console.log(scoresAndLetters.toString());
         
