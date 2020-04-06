@@ -9,10 +9,8 @@ body {
 }
 
 .header {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Stardos Stencil', cursive;
     text-align: center;
-    font-size: 30px;
-    color: white;
     margin: 0 auto;
     width: 80%;
 }
@@ -33,6 +31,7 @@ body {
     margin-top: -100px;
 }
 .display-4 {
+    color: gold;
     font-size: 50px;
     line-height: .2;
 }
@@ -41,15 +40,20 @@ body {
 }
 
 #lettersGuessed {
+    padding-bottom: 10px;
     
-    padding: 20px;
 }
 
 .Wins {
-    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .underscore {
     font-size: 30px;
     color: goldenrod;
+}
+
+.start {
+    padding-top: 10px;
 }
