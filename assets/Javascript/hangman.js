@@ -76,9 +76,13 @@ function gameEnd() {
     document.getElementById("lettersGuessed").innerHTML = lettersGuessed.join(" ");
 
     // user won
-    if (lettersInWord.toString() === scoresAndLetters.toString()) {
+    // 
+    if (scoresAndLetters.indexOf("_") === -1){
+        // console.log(scoresAndLetters.indexOf("_"));
         wins++;
-        alert("You won"); // change this
+        // console.log(lettersInWord.toString());
+        // console.log(scoresAndLetters.toString());
+        
 
         // display win
         document.getElementById("wins").innerHTML = wins;
@@ -87,7 +91,7 @@ function gameEnd() {
     // user lost
     else if (guessesRemaining === 0){
         loss++;
-        alert("you lost"); // change this
+        
 
         //display loss
         document.getElementById("loss").innerHTML = loss;
