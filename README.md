@@ -1,25 +1,9 @@
-# Word-Guess-Game
+<h1>STAR WARS HANGMAN</h1>
 
-<!-- Psuedo Code  -->
+<img src="https://vignette.wikia.nocookie.net/starwars/images/c/cc/Star-wars-logo-new-tall.jpg/revision/latest?cb=20190313021755">
 
-Word Guess Game
-
-HTML:
-
-Theme:? - figure that out later
-
--Header: picture
--body: container, border, text
-    -text:
-        "press any key to get started"
-        "Wins" --number of times user guessed the word correctly--
-            "_ _ _ _ _ _ _" if word is hangman
-            Reveal letters as guesssed // correct letters and not
-        "Current Word"
-        "Number of Guesses Remaining"
-        "Letters Already Guessed"
-
-Javascript:
+<strong>Click to Play:</strong> 
+https://zsievers.github.io/Star-Wars-Hangman/
 
 -press any key to start game
 -have words ready to be guessed
