@@ -2,12 +2,12 @@
 
 <img src="assets/images/starwars-readme.PNG">
 
-<strong>Click to Play:</strong> 
+<strong>Follow Link to Play:</strong> https://zsievers.github.io/Star-Wars-Hangman/
 
--I used basic <em>html</em> and <em>CSS</em> to format the page.
--Used <em>javascript</em> to push the users key to the page. 
--If users guess is WRONG, letter is pushed to "Letters Guessed" div. 
--If users guess is CORRECT, letter is pushed to the chosen word. 
+-I used basic <em>html</em> and <em>CSS</em> to format the page.<br>
+-Used <em>javascript</em> to push the users key to the page. <br>
+-If users guess is WRONG, letter is pushed to "Letters Guessed" div.<br> 
+-If users guess is CORRECT, letter is pushed to the chosen word. <br>
 
 Technical Approach:
 -press any key to start game
