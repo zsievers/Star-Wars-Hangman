@@ -10,11 +10,11 @@
 -If users guess is CORRECT, letter is pushed to the chosen word. <br>
 
 Technical Approach:
--press any key to start game
--have words ready to be guessed
--number of guess set
--have number of "_" to signify how many letters are in the current word
--have letters reveal themselves in the word or in letter pile when guessed. 
--If user guesses word, game stops and animation is cued. 
--if user doesn't get word in set amount of guesses, you lose animation is cued. 
--After win/loss the game automatically choose another word to and play again. 
+-press any key to start game <br>
+-have words ready to be guessed <Br>
+-number of guess set <br>
+-have number of "_" to signify how many letters are in the current word <br>
+-have letters reveal themselves in the word or in letter pile when guessed. <br> 
+-If user guesses word, game stops and animation is cued. <br>
+-if user doesn't get word in set amount of guesses, you lose animation is cued. <br>
+-After win/loss the game automatically choose another word to and play again. <br>
