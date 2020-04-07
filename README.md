@@ -3,7 +3,7 @@
 <img src="https://vignette.wikia.nocookie.net/starwars/images/c/cc/Star-wars-logo-new-tall.jpg/revision/latest?cb=20190313021755">
 
 <strong>Click to Play:</strong> 
-https://zsievers.github.io/Star-Wars-Hangman/
+<img src="/assets/images/starWars.png" href="https://zsievers.github.io/Star-Wars-Hangman/">
 
 -press any key to start game
 -have words ready to be guessed
