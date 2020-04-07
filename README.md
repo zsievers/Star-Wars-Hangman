@@ -9,7 +9,7 @@
 -If users guess is WRONG, letter is pushed to "Letters Guessed" div.<br> 
 -If users guess is CORRECT, letter is pushed to the chosen word. <br>
 
-Technical Approach:
+Technical Approach: <br>
 -press any key to start game <br>
 -have words ready to be guessed <Br>
 -number of guess set <br>
