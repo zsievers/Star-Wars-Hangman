@@ -1,10 +1,15 @@
 <h1>STAR WARS HANGMAN</h1>
 
-<img src="https://vignette.wikia.nocookie.net/starwars/images/c/cc/Star-wars-logo-new-tall.jpg/revision/latest?cb=20190313021755">
+<img src="assets/images/starwars-readme.PNG">
 
 <strong>Click to Play:</strong> 
-<img src="/assets/images/starWars.png" href="https://zsievers.github.io/Star-Wars-Hangman/">
 
+-I used basic <em>html</em> and <em>CSS</em> to format the page.
+-Used <em>javascript</em> to push the users key to the page. 
+-If users guess is WRONG, letter is pushed to "Letters Guessed" div. 
+-If users guess is CORRECT, letter is pushed to the chosen word. 
+
+Technical Approach:
 -press any key to start game
 -have words ready to be guessed
 -number of guess set
