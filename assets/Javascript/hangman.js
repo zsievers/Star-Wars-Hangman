@@ -22,6 +22,8 @@ function startGame() {
     guessesRemaining = 10;
     lettersGuessed = [];
     scoresAndLetters = [];
+    
+    
 
     // generates underscores and letters in word
     for (var i = 0; i < underscores; i++) {
@@ -29,6 +31,7 @@ function startGame() {
     }
 
     // display to html
+    
     document.getElementById("currentWord").innerHTML = scoresAndLetters.join(" ");
     document.getElementById("guessesLeft").innerHTML = guessesRemaining;
     document.getElementById("lettersGuessed").innerHTML = lettersGuessed;
@@ -83,15 +86,15 @@ function gameEnd() {
             alert("You Won!")}, 2000
         );
         setTimeout(function(){
-            startGame()}, 5000
+            startGame()}, 3000
             );
         wins++;
 
         
         if (chosenWord === "skywalker"){
-            document.querySelector(".winningImg").setAttribute("src", "assets/images/luke.jpg"); // correct image with correct path
+            document.querySelector(".winningImg").setAttribute("src", "assets/images/luke.jpg"); 
         }
-        else if (chosenWord === "yoda") {
+        else if (chosenWord === "yoda"){
             document.querySelector(".winningImg").setAttribute("src", "assets/images/yoda.jpg");
         }
         else if (chosenWord === "palpatine"){
@@ -109,17 +112,38 @@ function gameEnd() {
        
         // display win
         document.getElementById("wins").innerHTML = wins;
-        startGame();
+
+        // setTimeout(function(){
+        //     $(".winningImg").remove();}, 3000);
     }
     // user lost
     else if (guessesRemaining === 0){
         setTimeout(function(){
-            alert("You Lost!")}, 2000
+            alert("You Lost!")}, 1000
         );
         setTimeout(function(){
-            startGame()}, 5000
+            startGame()}, 4000
             );
         loss++;
+
+        if (chosenWord === "skywalker"){
+            document.querySelector(".losingImg").setAttribute("src", "assets/images/luke.jpg"); 
+        }
+        else if (chosenWord === "yoda"){
+            document.querySelector(".losingImg").setAttribute("src", "http://pluspng.com/img-png/star-wars-yoda-png-star-wars-png-555.png");
+        }
+        else if (chosenWord === "palpatine"){
+            document.querySelector(".losingImg").setAttribute("src", "assets/images/palpatine.jpg");
+        }
+        else if (chosenWord === "chewbacca"){
+            document.querySelector(".losingImg").setAttribute("src", "assets/images/chewy.jpg");
+        }
+        else if( chosenWord === "vader"){
+            document.querySelector(".losingImg").setAttribute("src", "assets/images/vader.jpg");
+        }
+        else if (chosenWord === "solo"){
+            document.querySelector(".losingImg").setAttribute("src", "assets/images/solo.jpg");
+        }
         
 
         //display loss

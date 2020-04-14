@@ -56,3 +56,13 @@ body {
 .start {
     padding-top: 10px;
 }
+
+.winningImg {
+    width: 300px;
+    float: right;
+}
+
+.losingImg {
+    width: 300px;
+    float: left;
+}
