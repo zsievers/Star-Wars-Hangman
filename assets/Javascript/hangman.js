@@ -79,24 +79,46 @@ function gameEnd() {
     // 
     if (scoresAndLetters.indexOf("_") === -1){
         // console.log(scoresAndLetters.indexOf("_"));
+        setTimeout(function(){
+            alert("You Won!")}, 2000
+        );
+        setTimeout(function(){
+            startGame()}, 5000
+            );
         wins++;
+
         
         if (chosenWord === "skywalker"){
-            document.querySelector(".winningImg").setAttribute("src", "#"); // correct image with correct path
+            document.querySelector(".winningImg").setAttribute("src", "assets/images/luke.jpg"); // correct image with correct path
         }
         else if (chosenWord === "yoda") {
-            
+            document.querySelector(".winningImg").setAttribute("src", "assets/images/yoda.jpg");
         }
-        // console.log(lettersInWord.toString());
-        // console.log(scoresAndLetters.toString());
-        
-
+        else if (chosenWord === "palpatine"){
+            document.querySelector(".winningImg").setAttribute("src", "assets/images/palpatine.jpg");
+        }
+        else if (chosenWord === "chewbacca"){
+            document.querySelector(".winningImg").setAttribute("src", "assets/images/chewy.jpg");
+        }
+        else if( chosenWord === "vader"){
+            document.querySelector(".winningImg").setAttribute("src", "assets/images/vader.jpg");
+        }
+        else if (chosenWord === "solo"){
+            document.querySelector(".winningImg").setAttribute("src", "assets/images/solo.jpg");
+        }
+       
         // display win
         document.getElementById("wins").innerHTML = wins;
         startGame();
     }
     // user lost
     else if (guessesRemaining === 0){
+        setTimeout(function(){
+            alert("You Lost!")}, 2000
+        );
+        setTimeout(function(){
+            startGame()}, 5000
+            );
         loss++;
         
 
