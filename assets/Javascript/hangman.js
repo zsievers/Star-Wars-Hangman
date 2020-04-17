@@ -18,6 +18,16 @@ function startGame() {
     lettersInWord = chosenWord.split("");// break word apart in indiv letters
     underscores = lettersInWord.length;
 
+    winningImg = document.querySelector(".winningImg")
+    winningImg.classList.add("hide");
+    winningImg.classList.remove("show");
+
+    losingImg = document.querySelector(".losingImg")
+    losingImg.classList.add("hide");
+    losingImg.classList.remove("show");
+   
+
+
     // reset each round
     guessesRemaining = 10;
     lettersGuessed = [];
@@ -83,13 +93,15 @@ function gameEnd() {
     if (scoresAndLetters.indexOf("_") === -1){
         // console.log(scoresAndLetters.indexOf("_"));
         setTimeout(function(){
-            alert("You Won!")}, 2000
+            alert("You Won!")}, 1000
         );
         setTimeout(function(){
-            startGame()}, 3000
+            startGame()}, 2000
             );
         wins++;
-
+        winningImg = document.querySelector(".winningImg");
+        winningImg.classList.add("show");
+        winningImg.classList.remove("hide");
         
         if (chosenWord === "skywalker"){
             document.querySelector(".winningImg").setAttribute("src", "assets/images/luke.jpg"); 
@@ -113,8 +125,6 @@ function gameEnd() {
         // display win
         document.getElementById("wins").innerHTML = wins;
 
-        // setTimeout(function(){
-        //     $(".winningImg").remove();}, 3000);
     }
     // user lost
     else if (guessesRemaining === 0){
@@ -122,9 +132,12 @@ function gameEnd() {
             alert("You Lost!")}, 1000
         );
         setTimeout(function(){
-            startGame()}, 4000
+            startGame()}, 2000
             );
         loss++;
+        losingImg = document.querySelector(".losingImg");
+        losingImg.classList.add("show");
+        losingImg.classList.remove("hide");
 
         if (chosenWord === "skywalker"){
             document.querySelector(".losingImg").setAttribute("src", "assets/images/luke.jpg"); 
@@ -148,7 +161,6 @@ function gameEnd() {
 
         //display loss
         document.getElementById("loss").innerHTML = loss;
-        startGame();
     }
       
 }
