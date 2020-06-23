@@ -107,16 +107,16 @@ function gameEnd() {
             document.querySelector(".winningImg").setAttribute("src", "assets/images/luke.jpg"); 
         }
         else if (chosenWord === "yoda"){
-            document.querySelector(".winningImg").setAttribute("src", "assets/images/yoda.jpg");
+            document.querySelector(".winningImg").setAttribute("src", "http://pluspng.com/img-png/star-wars-yoda-png-star-wars-png-555.png");
         }
         else if (chosenWord === "palpatine"){
-            document.querySelector(".winningImg").setAttribute("src", "assets/images/palpatine.jpg");
+            document.querySelector(".winningImg").setAttribute("src", "https://www.pngmart.com/files/12/Emperor-Palpatine-PNG-Background-Image.png");
         }
         else if (chosenWord === "chewbacca"){
             document.querySelector(".winningImg").setAttribute("src", "assets/images/chewy.jpg");
         }
         else if( chosenWord === "vader"){
-            document.querySelector(".winningImg").setAttribute("src", "assets/images/vader.jpg");
+            document.querySelector(".winningImg").setAttribute("src", "assets/images/vader.png");
         }
         else if (chosenWord === "solo"){
             document.querySelector(".winningImg").setAttribute("src", "assets/images/solo.jpg");
@@ -146,13 +146,13 @@ function gameEnd() {
             document.querySelector(".losingImg").setAttribute("src", "http://pluspng.com/img-png/star-wars-yoda-png-star-wars-png-555.png");
         }
         else if (chosenWord === "palpatine"){
-            document.querySelector(".losingImg").setAttribute("src", "assets/images/palpatine.jpg");
+            document.querySelector(".losingImg").setAttribute("src", "https://www.pngmart.com/files/12/Emperor-Palpatine-PNG-Background-Image.png");
         }
         else if (chosenWord === "chewbacca"){
             document.querySelector(".losingImg").setAttribute("src", "assets/images/chewy.jpg");
         }
         else if( chosenWord === "vader"){
-            document.querySelector(".losingImg").setAttribute("src", "assets/images/vader.jpg");
+            document.querySelector(".losingImg").setAttribute("src", "assets/images/vader.png");
         }
         else if (chosenWord === "solo"){
             document.querySelector(".losingImg").setAttribute("src", "assets/images/solo.jpg");
