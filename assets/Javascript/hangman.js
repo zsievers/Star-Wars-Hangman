@@ -104,22 +104,22 @@ function gameEnd() {
         winningImg.classList.remove("hide");
         
         if (chosenWord === "skywalker"){
-            document.querySelector(".winningImg").setAttribute("src", "assets/images/luke.jpg"); 
+            document.querySelector(".winningImg").setAttribute("src", "assets/images/luke.png"); 
         }
         else if (chosenWord === "yoda"){
-            document.querySelector(".winningImg").setAttribute("src", "http://pluspng.com/img-png/star-wars-yoda-png-star-wars-png-555.png");
+            document.querySelector(".winningImg").setAttribute("src", "assets/images/yoda.png");
         }
         else if (chosenWord === "palpatine"){
-            document.querySelector(".winningImg").setAttribute("src", "https://www.pngmart.com/files/12/Emperor-Palpatine-PNG-Background-Image.png");
+            document.querySelector(".winningImg").setAttribute("src", "assets/images/palp.png");
         }
         else if (chosenWord === "chewbacca"){
-            document.querySelector(".winningImg").setAttribute("src", "assets/images/chewy.jpg");
+            document.querySelector(".winningImg").setAttribute("src", "assets/images/chewy.png");
         }
         else if( chosenWord === "vader"){
             document.querySelector(".winningImg").setAttribute("src", "assets/images/vader.png");
         }
         else if (chosenWord === "solo"){
-            document.querySelector(".winningImg").setAttribute("src", "assets/images/solo.jpg");
+            document.querySelector(".winningImg").setAttribute("src", "assets/images/solo.png");
         }
        
         // display win
@@ -140,22 +140,22 @@ function gameEnd() {
         losingImg.classList.remove("hide");
 
         if (chosenWord === "skywalker"){
-            document.querySelector(".losingImg").setAttribute("src", "assets/images/luke.jpg"); 
+            document.querySelector(".losingImg").setAttribute("src", "assets/images/luke.png"); 
         }
         else if (chosenWord === "yoda"){
-            document.querySelector(".losingImg").setAttribute("src", "http://pluspng.com/img-png/star-wars-yoda-png-star-wars-png-555.png");
+            document.querySelector(".losingImg").setAttribute("src", "assets/images/yoda.png");
         }
         else if (chosenWord === "palpatine"){
-            document.querySelector(".losingImg").setAttribute("src", "https://www.pngmart.com/files/12/Emperor-Palpatine-PNG-Background-Image.png");
+            document.querySelector(".losingImg").setAttribute("src", "assets/images/palp.png");
         }
         else if (chosenWord === "chewbacca"){
-            document.querySelector(".losingImg").setAttribute("src", "assets/images/chewy.jpg");
+            document.querySelector(".losingImg").setAttribute("src", "assets/images/chewy.png");
         }
         else if( chosenWord === "vader"){
             document.querySelector(".losingImg").setAttribute("src", "assets/images/vader.png");
         }
         else if (chosenWord === "solo"){
-            document.querySelector(".losingImg").setAttribute("src", "assets/images/solo.jpg");
+            document.querySelector(".losingImg").setAttribute("src", "assets/images/solo.png");
         }
         
 

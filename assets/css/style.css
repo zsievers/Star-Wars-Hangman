@@ -58,12 +58,13 @@ body {
 }
 
 .winningImg {
-    width: 300px;
+    height: 400px;
     float: right;
+    padding-right: 30%;
 }
 
 .losingImg {
-    width: 300px;
+    height: 400px;
     float: left;
 }
 
